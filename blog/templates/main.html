@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>
+            메인 페이지
+        </h1>
+        
+        {% for post in post_list %}
+        <a href="{% url 'detail' post.id %}">
+            <div>
+                <h1>제목: {{ post.title }}</h1>
+                <img src="{{ post.photo.url }}" width="200">
+            </div>
+        </a>
+        <br>
+        <br>
+        <br>
+        {% endfor %}
+
+    </body>
+</html>

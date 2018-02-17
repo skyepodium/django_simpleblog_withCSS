@@ -1,0 +1,15 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <h1>{{ post.title }}</h1>
+            <img src="{{post.photo.url}}" width="200">
+            <div>작성일: {{post.created_date}}</div>
+            <div>작성자: {{post.writer}}</div>
+            <div>조회수: {{post.view_cnt}}</div>
+            <div>{{post.contents}}</div>
+        </div>
+    </body>
+</html>
