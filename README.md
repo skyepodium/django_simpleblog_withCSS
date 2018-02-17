@@ -12,7 +12,7 @@ CSS 없는 버전
 
 ### 설치
 
-1. [python3.6](w.python.org/downloads/) 이상이 설치되어 있어야합니다.
+1. [python3.6](https://www.python.org/downloads/) 이상이 설치되어 있어야합니다.
 2. 가상환경 생성 및 활성화
 ```
 $ python3 -m venv venv
