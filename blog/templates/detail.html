@@ -1,8 +1,30 @@
 <html>
     <head>
+        <!--
+        head에 기술하는 것은 다음 규칙에 따른다.
+        1. 타이틀
+        2. 메타 태그
+        3. 파비콘
+        4. 제이쿼리
+        5. 웹 폰트
+        6. css
+        7. 페이지별 스타일 시트
+        8. 구글 애널리틱스
+        9. 페이스북 픽셀
+        -->
+
+        <!--1 타이틀-->
+        <title>skyepodium 블로그</title>
+
+        <!--2 메타 태그-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta name="theme-color" content="#fff">
+        <meta property="og:url" content="https://www.potenup.com/">
 
     </head>
     <body>
+        
         <div>
             <h1>{{ post.title }}</h1>
             <img src="{{post.photo.url}}" width="200">

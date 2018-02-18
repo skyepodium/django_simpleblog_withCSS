@@ -1,23 +1,78 @@
 <html>
     <head>
+        <!--
+        head에 기술하는 것은 다음 규칙에 따른다.
+        1. 타이틀
+        2. 메타 태그
+        3. 파비콘
+        4. 제이쿼리
+        5. 웹 폰트
+        6. css
+        7. 페이지별 스타일 시트
+        8. 구글 애널리틱스
+        9. 페이스북 픽셀
+        -->
 
+        <!--1 타이틀-->
+        <title>skyepodium 블로그</title>
+
+        <!--2 메타 태그-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta name="theme-color" content="#fff">
+        <meta property="og:url" content="https://www.potenup.com/">
+
+        <link rel="stylesheet" href="/static/main_page.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
     </head>
     <body>
-        <h1>
-            메인 페이지
-        </h1>
-        
-        {% for post in post_list %}
-        <a href="{% url 'detail' post.id %}">
-            <div>
-                <h1>제목: {{ post.title }}</h1>
-                <img src="{{ post.photo.url }}" width="200">
+        <div id="nav_all">
+            <div id="nav">
+                <a id="nav_name" href="/">Blog</a>
+                <div id="nav_intro">소개</div>
             </div>
-        </a>
-        <br>
-        <br>
-        <br>
-        {% endfor %}
+        </div>
+
+        <div id="main_box">
+            <h1>
+                <span id="head_word1">skyepodium 블로그</span>
+                <span id="head_word2">장고에 관한 유익한 내용을</span>
+                <span id="head_word3">찾아보세요~</span>
+            </h1>
+        </div>
+
+        <div id="post_word_all">
+            <div id="post_word">
+                포스트
+            </div>
+        </div>
+
+
+        <div id="post_list">
+            {% for post in post_list %}
+            <a class="posts" href="{% url 'detail' post.id %}">
+                <div class="post_inner">
+                    <div id="post_title"> {{ post.title }} </div>
+                    <div id="post_contents"> {{ post.contents }} </div>
+                    <div id="post_image" style="background-image:url({{ post.photo.url }})"></div>
+                    <div id="sub_info">
+                        
+                        <div id="view_cnt">
+                            <span id="view_cnt_name"> 조회수 </span>
+                            <span id="view_cnt_num"> {{ post.view_cnt}} </span>
+                        </div>
+        
+                        <div id="date"> 
+                            {{ post.created_date }}
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+    
+            {% endfor %}
+        </div>
 
     </body>
 </html>
