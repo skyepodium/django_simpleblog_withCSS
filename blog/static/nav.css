@@ -1,0 +1,77 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{
+    margin:0;
+    padding:0;
+}
+
+#nav_all{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ececec;
+    box-sizing: border-box;
+}
+
+#nav{
+    width:calc(100% - 40px);
+    height:50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#nav_name{
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 54px;
+    font-family: 'Baloo Bhaina', cursive;
+    text-decoration: none;
+    font-size: 24px;
+    float: left;
+    color: #242424;
+    display:block;
+}
+
+#nav_intro{
+    display: block;
+    width: auto;
+    width: 50px;
+    height: 26px;
+    line-height: 23px;
+    margin-top: 12px;
+    font-weight: 300;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #353744;
+    border: 1px solid #4a4a4a;
+    border-radius: 20px;
+    float: right;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+}
+
+@media  screen and (min-width:700px){
+    #nav_all{
+        height:60px;
+    }
+
+    #nav{
+        height:60px;
+    }
+
+    #nav_name{
+        height: 60px;
+        line-height: 64px;
+        font-size: 27px;
+    }
+
+    #nav_intro{
+        font-size: 17px;
+        width: 60px;
+        height: 30px;
+        line-height: 28px;
+    }
+    
+}

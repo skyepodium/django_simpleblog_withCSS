@@ -1,37 +1,52 @@
 <html>
     <head>
-        <!--
-        head에 기술하는 것은 다음 규칙에 따른다.
-        1. 타이틀
-        2. 메타 태그
-        3. 파비콘
-        4. 제이쿼리
-        5. 웹 폰트
-        6. css
-        7. 페이지별 스타일 시트
-        8. 구글 애널리틱스
-        9. 페이스북 픽셀
-        -->
-
         <!--1 타이틀-->
         <title>skyepodium 블로그</title>
-
+        
         <!--2 메타 태그-->
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <meta name="theme-color" content="#fff">
-        <meta property="og:url" content="https://www.potenup.com/">
-
+        
+        <link rel="stylesheet" href="/static/nav.css">
+        <link rel="stylesheet" href="/static/detail_page.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
     </head>
+        
+
     <body>
         
-        <div>
-            <h1>{{ post.title }}</h1>
-            <img src="{{post.photo.url}}" width="200">
-            <div>작성일: {{post.created_date}}</div>
-            <div>작성자: {{post.writer}}</div>
-            <div>조회수: {{post.view_cnt}}</div>
-            <div>{{post.contents}}</div>
+        {% include 'nav.html' %}
+
+        <div id="top">
+            <div id="title">{{ post.title }}</div>
+
+            <div id="sub_info">
+                <div id="writer">
+                    {{ post.writer }}
+                </div>
+                <div id="bar">
+                    |
+                </div>
+                <div id="date">
+                    {{ post.created_date|date:"Y.m.d H:i" }}
+                </div> 
+            </div>
+
         </div>
+
+        <div id="contents">
+            
+            <div id="text">
+                {{post.contents|linebreaks }}
+            </div>
+            
+            <img id="image" src="{{post.photo.url}}" width="200">
+
+        </div>
+
+
+
     </body>
 </html>
