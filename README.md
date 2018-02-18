@@ -30,5 +30,6 @@ $ pip3 install -r requirements.txt
 $ python3 manage.py runserver 0.0.0.0:8000
 ```
 
-5. 샘플
+5. 샘플    
+반응형 완료      
 ![Alt Text](https://github.com/skyepodium/django_simpleblog_withCSS/raw/master/blog/media/blog_final.gif)
