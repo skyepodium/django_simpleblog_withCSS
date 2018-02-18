@@ -1,7 +1,7 @@
-# django_simpleblog_noCSS
+# django_simpleblog_withCSS
 
 장고 버전: 2.0.1     
-CSS 없는 버전
+CSS 있는 버전
 
 장고로 심플 블로그 만들기 강의의 전체 코드입니다.   
 블로그 강의: [링크](https://blog.naver.com/godori91/221197956351)  
