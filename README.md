@@ -34,10 +34,11 @@ $ source venv/bin/activate
 $ pip3 install -r requirements.txt
 ```
 4. 실행   
+`http://localhost:8000/`에 들어가면 블로그 앱을 볼 수 있습니다.        
 ```
 $ python3 manage.py runserver 0.0.0.0:8000
 ```
 5. 샘플     
 반응형 완료
 
-![Alt Text](https://github.com/skyepodium/django_simpleblog_withCSS/raw/master/blog/media/blog_final.gif)
+![Alt Text](./readme_image/blog_final.gif)
